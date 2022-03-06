@@ -55,8 +55,11 @@ body {
     font-weight: 400;
 }
 
+.header {
+    background: #434657;
+}
 .nav {
-    border-bottom: 2px solid #434657;
+    border-bottom: 2px solid #000000;
     padding: 10px;
     height: 10vh;
     display: flex;
@@ -72,13 +75,15 @@ body {
 .logo h1 {
     font-size: 30px;
     margin: 0;
+    color: #fff;
+    font-weight: 300;
 }
 .menu-hamburguer {
   width: 45px;
   height: 45px;
   padding: 10px;
   border: none;
-  background: #434657;
+  background: #e6b564;
   border-radius: 50%;
   display: flex;
   flex-flow: wrap;
@@ -88,7 +93,7 @@ body {
 }
 .menu-hamburguer span {
   display: inline-block;
-  height: 3px;
+  height: 2px;
   width: 100%;
   background: white;
 }
@@ -102,7 +107,7 @@ body {
 .nav-open {
     right: 0;
     display: block;
-    background: turquoise;
+    background: #434657;
     height: 100vh;
     width: 100%;
     z-index: 1;
@@ -120,8 +125,9 @@ body {
 .menu-itens li {
     font-size: 16px;
     line-height: 24px;
-    background: violet;
     margin-bottom: 5%;
+    color: #fff;
+    font-weight: 400;
 }
 .nav-open .content-full {
     padding: 0 10vw;
@@ -130,8 +136,30 @@ body {
     width: 200px;
     margin: auto;
 }
-
-
+.nav-open .landing-text-padrao .desc-product h2,
+.nav-open .landing-text-padrao .desc-product p {
+    color: #fff;
+}
+.icon-whats i {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background: #52d87b;
+    border-radius: 50%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-whats i:before {
+    content: url(img/whatsapp.png);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    transform: scale(0.7);
+}
 
 /* BANNER */
 .card-flex {
@@ -158,15 +186,15 @@ body {
     padding: 20px 0px;
 }
 .btn-green a {
-	padding: 10px 30px;
-	border: 1px solid #486c64;
-	color: #fff;
-	background: #486c64;
-	border-radius: 10px;
-	margin-right: 10px;
-	font-size: 12px;
-	font-weight: 500;
-	line-height: 18px;
+    padding: 10px 30px;
+    border: 1px solid #434657;
+    color: #fff;
+    background: #434657;
+    border-radius: 10px;
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
 }
 .btn-green a:nth-of-type(2) {
     color: #434657;
@@ -182,9 +210,6 @@ body {
 .aba-parceiros {
     padding-bottom: 30px;
 }
-.aba-parceiros br {
-	display: none;
-}
 .aba-parceiros .content-full {
     justify-content: space-between;
     background: #fff;
@@ -197,16 +222,25 @@ body {
 .group-parceiros {
 	display: flex;
 	flex-flow: wrap;
-	/* border: 2px solid #cbcbcb; */
-	border-radius: 10px;
 	width: 300px;
 	padding: 0 40px;
 }
 .cards-parceiros {
-    /* width: 50%; */
-    /* margin: 2%; */
     box-shadow: 5px 0px 15px 0px rgb(0 0 0 / 20%);
-    border-radius: 15px;
+}
+.aba-parceiros img {
+    height: 210px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 10s;
+}
+.aba-parceiros img:hover {
+    transform: scale(1.2);
+    border-radius: 70px;
+    transition: 10s;
+}
+.swiper-3d .swiper-slide-shadow {
+    border-radius: 10px;
 }
 img {
     width: 100%;
@@ -215,6 +249,9 @@ img {
 
 .content-products {
     padding-bottom: 30px;
+}
+.content-products p br {
+  display: none;
 }
 .landing .content-products:nth-of-type(2) {
     padding: 30px 0;
@@ -265,10 +302,8 @@ input[type="text"] {
 	padding: 20px;
 }
 .flex-footer {
-	display: flex;
-	flex-flow: wrap;
-	justify-content: space-between;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 .content-foot a {
 	display: inline-block;
@@ -303,9 +338,6 @@ input[type="text"] {
   .desc-banner p {
     font-size: 14px;
     line-height: 20px;
-  }
-  .desc-banner p br {
-    display: none;
   }
   .landing-text-padrao h2 {
     font-size: 38px;
@@ -389,12 +421,26 @@ input[type="text"] {
     justify-content: center;
     align-items: center;
   }
+  .flex-footer {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
 }
 @media (min-width: 1280px){
   .cards-testimonials .borda-img {
     min-height: 603px;
   }
+  .content-products p br,
   .aba-parceiros br {
 	   display: block;
+  }
+}
+@media(min-width: 1920px){
+  .icon-whats i {
+      right: 30px;
+      bottom: 30px;
+      width: 60px;
+      height: 60px;
   }
 }
