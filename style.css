@@ -451,15 +451,21 @@ input[type="text"] {
 	flex-flow: wrap;
 }
 #instagramfeed a {
-	width: 130px;
-	height: 130px;
-	display: inline-block;
-	background-size: cover;
-	background-position: center center;
-	border-radius: 10px;
-	margin: 2px;
-	overflow:hidden;
+  width: 210px;
+  height: 210px;
+  background-size: cover;
+  display: inline-block;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 2px;
+  transition: 10s;
 }
+/* #instagramfeed a {
+    height: 210px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 10s;
+} */
 #instagramfeed a video{
     width: 100%;
 }
