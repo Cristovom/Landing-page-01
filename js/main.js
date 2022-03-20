@@ -58,10 +58,10 @@ $.ajax({
     console.log(data);
     for( x in data.data ){
         if(data.data[x].media_type == 'VIDEO'){
-          $('#instagramfeed').append('<a target="_blank" href="'+data.data[x].permalink+'"><video autoplay muted="true" loop="true" src="'+data.data[x].media_url+'"></video></a>'); // data.data[x].images.low_resolution.url - URL of image, 306Ñ…306
+          $('#instagramfeed').append('<a target="_blank" href="'+data.data[x].permalink+'"><video autoplay muted="true" loop="true" src="'+data.data[x].media_url+'"></video></a>');
         }
         else{
-          $('#instagramfeed').append('<a target="_blank" href="'+data.data[x].permalink+'" style="background-image:url('+data.data[x].media_url+')"></a>'); // data.data[x].images.low_resolution.url - URL of image, 306Ñ…306
+          $('#instagramfeed .group-photo').append('<a target="_blank" href="'+data.data[x].permalink+'" class="card-unico" style="background-image:url('+data.data[x].media_url+')"></a>');
         }
     }
   },
